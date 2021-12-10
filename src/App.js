@@ -78,11 +78,11 @@ import Sponsors from "components/testimonials/TwoColumnWithImage.js";
 // import GetStarted from "components/cta/GetStarted.js";
 // import GetStarted from "components/cta/GetStartedLight.js";
 // import DownloadApp from "components/cta/DownloadApp.js";
-
+import Header from "components/headers/light.js";
 // import Footer from "components/footers/SimpleFiveColumn.js";
 // import Footer from "components/footers/FiveColumnWithInputForm.js";
 // import Footer from "components/footers/FiveColumnWithBackground.js";
-// import Footer from "components/footers/FiveColumnDark.js";
+import Footer from "components/footers/FiveColumnDark.js";
 // import Footer from "components/footers/MiniCenteredFooter.js";
 
 /* Ready Made Pages (from demos folder) */
@@ -116,6 +116,7 @@ export default function App() {
 
 
   return (
+    
     <Router>
       <Switch>
       <Route exact path="/">
@@ -125,28 +126,38 @@ export default function App() {
           <Team />
         </Route>
         <Route path="/sponsors">
+        <Header />  
           <Sponsors />
+          <Footer />
         </Route>
-        {/* <Route path="/">
-          <BlogIndexPage />
-        </Route>
-        <Route path="/">
-          <BlogIndexPage />
-        </Route> */}
         <Route path="/contact-us">
+        <Header />
           <ContactUsPage />
+          <Footer />
+        </Route>
+        <Route path="/login">
+        <Header />
+          <LoginPage />
+          <Footer />
         </Route>
         <Route path="/components/:type/:subtype/:name">
+        <Header />
           <ComponentRenderer />
+          <Footer />
         </Route>
         <Route path="/components/:type/:name">
+        <Header />
           <ComponentRenderer />
+          <Footer />
         </Route>
         <Route path="/thank-you">
+        <Header />
           <ThankYouPage />
+          <Footer />
         </Route>
       </Switch>
     </Router>
+    
   );
 }
 

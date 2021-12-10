@@ -9,6 +9,9 @@ import { ReactComponent as TwitterIcon} from "images/twitter-icon.svg";
 import { ReactComponent as LinkedinIcon} from "images/linkedin-icon.svg";
 import { ReactComponent as GithubIcon } from "images/github-icon.svg";
 
+import Header from "components/headers/light.js";
+import Footer from "components/footers/FiveColumnDark.js";
+
 const HeadingContainer = tw.div``
 const Heading = tw(SectionHeading)``
 const Subheading = tw(SubheadingBase)`text-center mb-3`
@@ -161,7 +164,8 @@ export default ({
     },
   ]
 }) => {
-  return (
+  return (<>
+    <Header />
     <Container>
       <ContentWithPaddingXl>
         <HeadingContainer>
@@ -189,5 +193,7 @@ export default ({
         </Cards>
       </ContentWithPaddingXl>
     </Container>
+    <Footer />
+    </>
   );
 };

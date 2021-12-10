@@ -30,9 +30,10 @@ function AnimatedSlideInComponent({ direction = "left", offset = 30, children })
 
   const x = { target: "0%" };
 
+  // if (direction === "left") x.initial = "-150%";
+  // else x.initial = "150%";
   if (direction === "left") x.initial = "-150%";
   else x.initial = "150%";
-
   return (
     <motion.section
       initial={{ x: x.initial }}

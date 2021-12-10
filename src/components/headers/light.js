@@ -7,7 +7,7 @@ import { css } from "styled-components/macro"; //eslint-disable-line
 
 import useAnimatedNavToggler from "../../helpers/useAnimatedNavToggler.js";
 
-import logo from "../../images/logo.svg";
+import logo from "../../images/hba-logo.png";
 import { ReactComponent as MenuIcon } from "feather-icons/dist/icons/menu.svg";
 import { ReactComponent as CloseIcon } from "feather-icons/dist/icons/x.svg";
 
@@ -35,7 +35,7 @@ export const PrimaryLink = tw(NavLink)`
 `;
 
 export const LogoLink = styled(NavLink)`
-  ${tw`flex items-center font-black border-b-0 text-2xl! ml-0!`};
+  ${tw`flex items-center font-black border-b-0 text-xl! ml-0!`};
 
   img {
     ${tw`w-10 mr-3`}
@@ -78,9 +78,9 @@ export default ({ roundedHeaderButton = false, logoLink, links, className, colla
       <NavLink href="/events">Events</NavLink>
       <NavLink href="/sponsors">Sponsors</NavLink>
       <NavLink href="/contact-us">Contact Us</NavLink>
-      {/* <Link to="/#" tw="lg:ml-12!">
+      <NavLink href="/login" tw="lg:ml-12!">
         Login
-      </Link> */}
+      </NavLink>
       <PrimaryLink css={roundedHeaderButton && tw`rounded-full`}href="/membership">Sign Up</PrimaryLink>
     </NavLinks>
   ];
@@ -91,7 +91,7 @@ export default ({ roundedHeaderButton = false, logoLink, links, className, colla
   const defaultLogoLink = (
     <LogoLink href="/">
       <img src={logo} alt="logo" />
-      HBA
+      Hegewisch Business Association
     </LogoLink>
   );
 

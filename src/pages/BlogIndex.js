@@ -5,12 +5,14 @@ import tw from "twin.macro";
 import styled from "styled-components";
 import { css } from "styled-components/macro";
 import Header from "components/headers/light.js";
-import Footer from "components/footers/FiveColumnWithInputForm.js";
+import Footer from "components/footers/FiveColumnDark.js";
 import { SectionHeading } from "components/misc/Headings";
 import { PrimaryButton } from "components/misc/Buttons";
+import Newsletter from "components/forms/SimpleSubscribeNewsletter.js";
+
 
 const HeadingRow = tw.div`flex`;
-const Heading = tw(SectionHeading)`text-gray-900`;
+const Heading = tw(SectionHeading)`text-gray-900 `;
 const Posts = tw.div`mt-6 sm:-mr-8 flex flex-wrap`;
 const PostContainer = styled.div`
   ${tw`mt-10 w-full sm:w-1/2 lg:w-1/3 sm:pr-8`}
@@ -47,17 +49,17 @@ const ButtonContainer = tw.div`flex justify-center`;
 const LoadMoreButton = tw(PrimaryButton)`mt-16 mx-auto`;
 
 export default ({
-  headingText = "Hegewisch Business Association (HBA)",
+  headingText = "Making a difference in the Community!",
   posts = [
     {
       imageSrc:
         "https://images.unsplash.com/photo-1499678329028-101435549a4e?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1024&q=80",
-      category: "Travel Tips",
+      category: "Community Involvement",
       date: "April 21, 2020",
       title: "Safely Travel in Foreign Countries",
       description:
         "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.  Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.",
-      url: "https://timerse.com",
+      url: "http://timerse.com",
       featured: true
     },
     getPlaceholderPost(),
@@ -114,6 +116,8 @@ export default ({
           )}
         </ContentWithPaddingXl>
       </Container>
+      <Newsletter />
+      <br/>
       <Footer />
     </AnimationRevealPage>
   );
